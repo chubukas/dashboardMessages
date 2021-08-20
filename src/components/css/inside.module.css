@@ -1,0 +1,100 @@
+.main {
+  margin: 1rem 3rem 1rem 5rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.headerText {
+  font-size: 0.9rem;
+}
+
+.divText {
+  border-radius: 20px;
+  background-color: #eeeeee;
+  width: 70%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1px;
+}
+
+.textInput {
+  border: none;
+  background-color: transparent;
+  margin-left: 0.5rem;
+  width: 90%;
+}
+
+.searchIcon {
+  position: relative;
+  left: 5px;
+}
+
+/* INSIDE LEFT */
+.insideLeftMain {
+  border-right: 1px #eeeeee solid;
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.notificationBorder {
+  border-bottom: 1px #eeeeee solid;
+}
+
+.nameText {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.messageText {
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.statusSuccess {
+  background-color: #ccf3ce;
+  color: #0c991f;
+  border-radius: 20px;
+  padding: 0.2rem;
+  font-size: 0.6rem;
+}
+
+.statusWarning {
+  background-color: #ebdf97;
+  color: #948b0a;
+  border-radius: 20px;
+  padding: 0.2rem;
+  font-size: 0.6rem;
+}
+
+.statusDanger {
+  background-color: #ecb1b1;
+  color: #7a0808;
+  border-radius: 20px;
+  padding: 0.2rem;
+  font-size: 0.6rem;
+}
+
+.socialFacebook {
+  background-color: #d9daf7;
+  color: #0d19c2;
+  border-radius: 20px;
+  padding: 0.2rem;
+  font-size: 0.6rem;
+}
+
+.socialEmail {
+  background-color: #cccceb;
+  color: #8b8a8a;
+  border-radius: 20px;
+  padding: 0.2rem;
+  font-size: 0.6rem;
+}
+
+/* INSIDE Right */
+.insideRightMain {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
