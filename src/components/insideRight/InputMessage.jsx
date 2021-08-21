@@ -25,12 +25,10 @@ import {
   clickable,
   avatarNameRed,
   avatarName,
-  suggestions,
-  replayName,
-  avatarNameGreen,
 } from "../css/inside.module.css";
 
 import { MessageName } from "../MessageName";
+import { SuggestionBox } from "../SuggestionsBox";
 
 export const InputMessage = () => {
   const [removeReciever, setRemoveReciever] = useState(true);
@@ -60,6 +58,11 @@ export const InputMessage = () => {
       <FontAwesomeIcon icon={data} />
     </div>
   ));
+
+  const UsersSearch = [
+    { userName: "Steph Okafor", userEmail: "Steph.Okafor@alphacx.com" },
+    { userName: "Steph Okafor", userEmail: "Steph.Okafor@alphacx.com" },
+  ];
 
   return (
     <div className="mb-4">
@@ -112,25 +115,8 @@ export const InputMessage = () => {
           </div>
         </div>
       </div>
-      <div className={`shadow ${suggestions}`}>
-        <p className={`${replayName} fw-bolder`}>Suggested contants</p>
-        <div>
-          <MessageName
-            onRemoveReciever={onRemoveReciever}
-            removeReciever={removeReciever}
-            userName="Steph Okafor"
-            userEmail="Steph.Okafor@alphacx.com"
-            colorText={avatarNameGreen}
-          />
-          <MessageName
-            onRemoveReciever={onRemoveReciever}
-            removeReciever={removeReciever}
-            userName="Steph Okafor"
-            userEmail="Steph.Okafor@alphacx.com"
-            colorText={avatarNameGreen}
-          />
-        </div>
-      </div>
+
+      <SuggestionBox UsersSearch={UsersSearch} />
     </div>
   );
 };

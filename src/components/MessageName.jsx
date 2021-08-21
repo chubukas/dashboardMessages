@@ -22,7 +22,10 @@ export const MessageName = ({
         <span className={colorText}>{createNameAcronym(userName)}</span>
         <span className={`${socialFacebook} `}>
           {userEmail}
-          <span className={`mx-2 ${clickable}`} onClick={onRemoveReciever}>
+          <span
+            className={`mx-2 ${clickable} ${onRemoveReciever ? "" : "d-none"}`}
+            onClick={onRemoveReciever}
+          >
             X
           </span>
         </span>

@@ -223,7 +223,7 @@
   position: absolute;
   width: 15rem;
   height: 8rem;
-  bottom: -51rem;
+  bottom: -43.8rem;
   left: 3.5rem;
   border-radius: 0.5rem;
   text-align: left;
@@ -253,12 +253,9 @@
   }
 
   .suggestions {
-    position: absolute;
     width: 15rem;
     height: 8rem;
     bottom: -12rem;
     left: 29rem;
-    border-radius: 0.5rem;
-    z-index: 9999;
   }
 }
