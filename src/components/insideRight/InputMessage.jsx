@@ -20,13 +20,17 @@ import {
   inputBox,
   notificationBorder,
   messageText,
-  avatarName,
-  socialFacebook,
   textArea,
   smallBtn,
   clickable,
+  avatarNameRed,
+  avatarName,
+  suggestions,
+  replayName,
+  avatarNameGreen,
 } from "../css/inside.module.css";
-import { createNameAcronym } from "../../util/createNameAcronym";
+
+import { MessageName } from "../MessageName";
 
 export const InputMessage = () => {
   const [removeReciever, setRemoveReciever] = useState(true);
@@ -61,31 +65,33 @@ export const InputMessage = () => {
     <div className="mb-4">
       <div className={inputBox}>
         <div className={notificationBorder}>
-          <div className="d-md-flex justify-content-between">
-            <div className={`${messageText} text-muted my-auto py-2 d-flex`}>
-              <span className="mx-3">To: </span>
-              <span className={removeReciever ? "d-block" : "d-none"}>
-                <span className={avatarName}>
-                  {createNameAcronym("Steph Okafor")}
-                </span>
-                <span className={`${socialFacebook} `}>
-                  Steph.Okafor@alphacx.com{" "}
-                  <span
-                    className={`mx-2 ${clickable}`}
-                    onClick={onRemoveReciever}
-                  >
-                    X
-                  </span>
-                </span>
-              </span>
-            </div>
+          <div
+            className={`d-md-flex justify-content-between ${notificationBorder}`}
+          >
+            <MessageName
+              onRemoveReciever={onRemoveReciever}
+              removeReciever={removeReciever}
+              nameType="To"
+              userName="Steph Okafor"
+              userEmail="Steph.Okafor@alphacx.com"
+              colorText={avatarName}
+            />
             <div
-              className={`text-primary my-auto mx-3 mt-2 mt-mb-0 ${messageText}`}
+              className={`text-primary my-auto mx-3 mt-2 mt-mb-0 d-none d-md-block ${messageText}`}
             >
               <span className={clickable}>cc</span>
               <span className={`mx-3 ${clickable}`}> bc</span>
             </div>
           </div>
+
+          <MessageName
+            onRemoveReciever={onRemoveReciever}
+            removeReciever={removeReciever}
+            nameType="CC"
+            userName="Steph Okafor"
+            userEmail="Steph.Okafor@alphacx.com"
+            colorText={avatarNameRed}
+          />
         </div>
         <div>
           <textarea
@@ -104,6 +110,25 @@ export const InputMessage = () => {
             <button className="btn btn-primary">send</button>
             <button className="btn btn-primary dropdown-toggle"></button>
           </div>
+        </div>
+      </div>
+      <div className={`shadow ${suggestions}`}>
+        <p className={`${replayName} fw-bolder`}>Suggested contants</p>
+        <div>
+          <MessageName
+            onRemoveReciever={onRemoveReciever}
+            removeReciever={removeReciever}
+            userName="Steph Okafor"
+            userEmail="Steph.Okafor@alphacx.com"
+            colorText={avatarNameGreen}
+          />
+          <MessageName
+            onRemoveReciever={onRemoveReciever}
+            removeReciever={removeReciever}
+            userName="Steph Okafor"
+            userEmail="Steph.Okafor@alphacx.com"
+            colorText={avatarNameGreen}
+          />
         </div>
       </div>
     </div>

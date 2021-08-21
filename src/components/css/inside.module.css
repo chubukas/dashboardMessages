@@ -163,7 +163,29 @@
   background-color: #0d146e;
   color: #ffffff;
   padding: 0.4rem;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
+}
+
+.avatarNameRed {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #b63232;
+  color: #ffffff;
+  padding: 0.4rem;
+  font-size: 0.5rem;
+}
+
+.avatarNameGreen {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0c991f;
+  color: #ffffff;
+  padding: 0.4rem;
+  font-size: 0.5rem;
 }
 
 .replayName {
@@ -176,12 +198,13 @@
 
 /* INPUT MESSAGE */
 .inputBox {
-  height: 16.5rem;
+  height: 17rem;
   width: 95%;
   border: 1px #eeeeee solid;
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .textArea {
@@ -196,6 +219,19 @@
   float: right;
 }
 
+.suggestions {
+  position: absolute;
+  width: 15rem;
+  height: 8rem;
+  bottom: -51rem;
+  left: 3.5rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  padding: 0.8rem 0px 0px 0.8rem;
+  font-size: 0.8rem;
+  background-color: #ffffff;
+}
+
 /* MEDIA QUERIES */
 
 @media (min-width: 768px) {
@@ -208,11 +244,21 @@
   }
 
   .inputBox {
-    height: 10rem;
+    height: 12rem;
   }
 
   .indicatordownMessage {
     bottom: 3px;
     right: 5px;
+  }
+
+  .suggestions {
+    position: absolute;
+    width: 15rem;
+    height: 8rem;
+    bottom: -12rem;
+    left: 29rem;
+    border-radius: 0.5rem;
+    z-index: 9999;
   }
 }
