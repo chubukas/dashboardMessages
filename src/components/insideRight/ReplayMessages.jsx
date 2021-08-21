@@ -20,7 +20,7 @@ export const ReplayMessages = ({ replies }) => {
               <span className={avatarName}>{createNameAcronym(name)}</span>
             )}
           </div>
-          <div className="mx-3">
+          <div className="mx-2 mx-md-4">
             <p className={nameText}>
               {name} <span className="text-muted">replied</span>
             </p>
@@ -29,8 +29,8 @@ export const ReplayMessages = ({ replies }) => {
             } (${time})`}</p>
           </div>
         </div>
-        <div className={`my-3 text-muted ${headerText}`}>
-          <p>{replayMessage}</p>
+        <div className={`text-muted ${headerText}`}>
+          <pre>{replayMessage}</pre>
           <p>{date}</p>
         </div>
       </div>

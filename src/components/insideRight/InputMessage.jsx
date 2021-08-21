@@ -12,7 +12,6 @@ import {
   faHandHolding,
   faFileImage,
   faBookOpen,
-  faBookReader,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -40,11 +39,10 @@ export const InputMessage = () => {
     faHandHolding,
     faFileImage,
     faBookOpen,
-    faBookReader,
   ];
 
   const displayIcons = Icons.map((data, i) => (
-    <div key={i} className="fa-xs mx-2 text-primary">
+    <div key={i} className="fa-xs text-primary col-2 col-lg-1 mt-3">
       <FontAwesomeIcon icon={data} />
     </div>
   ));
@@ -53,7 +51,7 @@ export const InputMessage = () => {
     <div className="mb-4">
       <div className={inputBox}>
         <div className={notificationBorder}>
-          <div className="d-flex justify-content-between">
+          <div className="d-md-flex justify-content-between">
             <div className={`${messageText} text-muted my-auto py-2`}>
               <span className="mx-3">To: </span>
               <span className={avatarName}>
@@ -63,7 +61,7 @@ export const InputMessage = () => {
                 Steph.Okafor@alphacx.com <span className="mx-2">X</span>
               </span>
             </div>
-            <div className={`text-primary my-auto ${messageText}`}>
+            <div className={`text-primary my-auto mx-3 ${messageText}`}>
               <span>cc</span>
               <span className="mx-3"> bc</span>
             </div>
@@ -73,15 +71,16 @@ export const InputMessage = () => {
           <textarea
             className={textArea}
             name="textarea"
-            id=""
-            cols="78"
-            rows="4"
+            id="textare"
           ></textarea>
         </div>
-        <div className="d-flex justify-content-between mx-3">
-          <div className="d-flex">{displayIcons}</div>
+        <div className="d-md-flex justify-content-between mx-3">
+          <div className="row">{displayIcons}</div>
 
-          <div className={`btn-group btn-group-sm ${smallBtn}`} role="group">
+          <div
+            className={`btn-group btn-group-sm mt-3  mt-md-0 ${smallBtn}`}
+            role="group"
+          >
             <button className="btn btn-primary">send</button>
             <button className="btn btn-primary dropdown-toggle"></button>
           </div>

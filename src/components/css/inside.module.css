@@ -1,5 +1,4 @@
 .main {
-  margin: 1rem 3rem 1rem 5rem;
   background-color: #ffffff;
   border-radius: 5px;
 }
@@ -9,7 +8,7 @@
 }
 
 .rightBorder {
-  border-right: 1px #eeeeee solid;
+  border-right: none;
 }
 
 .divText {
@@ -31,6 +30,7 @@
 .searchIcon {
   position: relative;
   left: 5px;
+  color: #0d19c2;
 }
 
 /* INSIDE LEFT */
@@ -119,7 +119,7 @@
 
 /* INPUT MESSAGE */
 .inputBox {
-  height: 11rem;
+  height: 16rem;
   width: 100%;
   border: 1px #eeeeee solid;
   border-radius: 5px;
@@ -128,8 +128,27 @@
 .textArea {
   border: none;
   background-color: transparent;
+  width: 100%;
+  height: 5rem;
 }
 .smallBtn {
   height: 1.6rem;
   padding: auto;
+  float: right;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .main {
+    margin: 1rem 3rem 1rem 5rem;
+  }
+
+  .rightBorder {
+    border-right: 1px #eeeeee solid;
+  }
+
+  .inputBox {
+    height: 11rem;
+  }
 }

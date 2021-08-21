@@ -1,11 +1,10 @@
 .sidebar {
   background-color: #0d146e;
-  height: 100vh;
+  height: 52rem;
   width: 3rem;
   position: absolute;
   top: 0;
   bottom: 0;
-  overflow: auto;
   text-align: center;
   color: #f0f8ff;
 }
@@ -18,4 +17,8 @@
 .sidebarIcons {
   margin-top: 1rem;
   cursor: pointer;
+}
+
+.downPhone {
+  padding-top: 20rem;
 }

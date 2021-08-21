@@ -27,7 +27,10 @@ export const MessageDisplay = ({ data }) => {
   return (
     <>
       <div className={`d-flex justify-content-between ${notificationBorder}`}>
-        <div>
+        <div className="mx-5 mx-md-0">
+          <div className="d-block d-md-none mb-4">
+            <RightHeader smPhone={true} />
+          </div>
           <div className="d-flex">
             <div>
               <img className={avatar} src={pics} alt="avatar" />
@@ -54,7 +57,7 @@ export const MessageDisplay = ({ data }) => {
       <div className={`my-3 text-muted ${headerText} ${notificationBorder}`}>
         <pre>{mainMessage}</pre>
       </div>
-      <div>{replayMessages}</div>
+      <div className="mx-3 mx-md-0">{replayMessages}</div>
     </>
   );
 };

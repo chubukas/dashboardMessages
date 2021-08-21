@@ -1,8 +1,7 @@
-import { main } from "./css/inside.module.css";
+import { main, rightBorder } from "./css/inside.module.css";
 import { InsideLeft } from "./insideLeft";
 import { InsideRight } from "./insideRight";
 import { data } from "../data/data";
-import { rightBorder } from "./css/inside.module.css";
 
 export const Inside = () => {
   const { messages } = data;

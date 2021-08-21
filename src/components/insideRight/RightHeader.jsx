@@ -6,17 +6,17 @@ import {
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-export const RightHeader = () => {
+export const RightHeader = ({ smPhone }) => {
   const Icons = [faArrowsAltH, faUser, faUserPlus, faCheckCircle];
 
   const displayIcons = Icons.map((data, i) => (
-    <div className="mx-3" key={i}>
+    <div className={smPhone ? "col-2 mt-3 text-center" : "mx-3"} key={i}>
       <FontAwesomeIcon icon={data} />
     </div>
   ));
 
   return (
-    <div className="d-flex">
+    <div className="d-md-flex">
       <div>
         <select
           name="select"
@@ -31,7 +31,7 @@ export const RightHeader = () => {
           <option value="Closed">Closed</option>
         </select>
       </div>
-      {displayIcons}
+      <div className={`${smPhone ? "row" : "d-flex"}`}>{displayIcons}</div>
     </div>
   );
 };

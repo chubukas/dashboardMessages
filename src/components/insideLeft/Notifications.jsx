@@ -47,7 +47,9 @@ export const Notifications = () => {
     ) => (
       <div
         key={i}
-        className={`${arr.length === i + 1 ? "" : notificationBorder}`}
+        className={`${
+          arr.length === i + 1 ? "mb-4 mb-md-0" : notificationBorder
+        }`}
       >
         <div className="d-flex justify-content-evenly">
           <div className="my-auto">
