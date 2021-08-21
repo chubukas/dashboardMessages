@@ -4,6 +4,7 @@ import {
   messageText,
   headerText,
   avatarName,
+  replayName,
 } from "../css/inside.module.css";
 import { createNameAcronym } from "../../util/createNameAcronym";
 
@@ -21,7 +22,7 @@ export const ReplayMessages = ({ replies }) => {
             )}
           </div>
           <div className="mx-2 mx-md-4">
-            <p className={nameText}>
+            <p className={`${nameText} ${replayName}`}>
               {name} <span className="text-muted">replied</span>
             </p>
             <p className={`${messageText} text-muted`}>{`${

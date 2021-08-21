@@ -33,6 +33,70 @@
   color: #0d19c2;
 }
 
+.indicatordown {
+  position: absolute;
+  bottom: 0px;
+  right: 1px;
+  background-color: #20a73b;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  width: 6px;
+  height: 6px;
+}
+
+.indicatordownMessage {
+  position: absolute;
+  bottom: 18px;
+  right: 5px;
+  background-color: #20a73b;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  width: 6px;
+  height: 6px;
+}
+
+.indicatorTop {
+  position: absolute;
+  top: 0px;
+  right: -1px;
+  background-color: #20a73b;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  width: 6px;
+  height: 6px;
+}
+
+.chatClose {
+  width: 5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  font-size: 0.8rem;
+  text-align: center;
+  top: 5px;
+  cursor: pointer;
+  right: 3rem;
+  box-shadow: 2px 2px 4px #000000;
+  color: #8b8a8a;
+  z-index: 1;
+}
+
+.chatClose::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: -10px;
+  border-right: 10px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 10px solid #ffffff;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
 /* INSIDE LEFT */
 .insideLeftMain {
   padding-top: 1rem;
@@ -113,6 +177,10 @@
   font-size: 0.8rem;
 }
 
+.replayName {
+  color: #0d146e;
+}
+
 .messageBottomMargin {
   margin-bottom: 5rem;
 }
@@ -150,5 +218,10 @@
 
   .inputBox {
     height: 11rem;
+  }
+
+  .indicatordownMessage {
+    bottom: 3px;
+    right: 5px;
   }
 }

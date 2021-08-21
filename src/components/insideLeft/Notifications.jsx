@@ -7,6 +7,8 @@ import {
   nameText,
   messageText,
   notificationBorder,
+  indicatordown,
+  clickable,
 } from "../css/inside.module.css";
 import { avatar } from "../css/header.module.css";
 import { data } from "../../data/data";
@@ -39,7 +41,7 @@ export const Notifications = () => {
     return color;
   };
 
-  const displaySocialMedia = notifications.map(
+  const displayNotification = notifications.map(
     (
       { name, message, time, socialMedia, status, unreadMessage, pics },
       i,
@@ -49,11 +51,12 @@ export const Notifications = () => {
         key={i}
         className={`${
           arr.length === i + 1 ? "mb-4 mb-md-0" : notificationBorder
-        }`}
+        } ${clickable}`}
       >
         <div className="d-flex justify-content-evenly">
-          <div className="my-auto">
+          <div className="my-auto position-relative">
             <img className={avatar} src={pics} alt="avatar" />
+            <span className={indicatordown}>&nbsp;</span>
           </div>
           <div className=" mb-2">
             <div>
@@ -90,5 +93,5 @@ export const Notifications = () => {
     )
   );
 
-  return <>{displaySocialMedia}</>;
+  return <>{displayNotification}</>;
 };

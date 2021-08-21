@@ -15,10 +15,27 @@
 }
 
 .sidebarIcons {
-  margin-top: 1rem;
+  margin-top: 2rem;
   cursor: pointer;
 }
 
+.sidebarIcons:hover {
+  background-color: #cecdcd67;
+  width: 70%;
+  border-radius: 2px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .downPhone {
-  padding-top: 20rem;
+  margin-top: 20rem;
+  cursor: pointer;
+}
+
+.downPhone:hover {
+  background-color: #cecdcd67;
+  width: 70%;
+  border-radius: 2px;
+  margin-right: auto;
+  margin-left: auto;
 }

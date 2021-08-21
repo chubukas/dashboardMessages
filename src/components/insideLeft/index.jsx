@@ -7,6 +7,7 @@ import {
   searchIcon,
   divText,
   headerText,
+  clickable,
 } from "../css/inside.module.css";
 import { Notifications } from "./Notifications";
 
@@ -14,10 +15,10 @@ export const InsideLeft = () => {
   return (
     <div className={insideLeftMain}>
       <div className={`d-flex justify-content-between ${headerText}`}>
-        <div className="mx-3 fw-bolder">
+        <div className={`mx-3 fw-bolder ${clickable}`}>
           Facebook <FontAwesomeIcon icon={faArrowDown} />
         </div>
-        <div className="text-muted mx-3">
+        <div className={`text-muted mx-3 ${clickable}`}>
           Open
           <FontAwesomeIcon icon={faArrowDown} />
         </div>

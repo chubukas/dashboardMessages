@@ -1,6 +1,6 @@
 import {
   faCloudUploadAlt,
-  faPhoneSquareAlt,
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -35,7 +35,7 @@ export const SideBar = () => {
         </div>
         {sidebaricons}
         <div className={downPhone}>
-          <FontAwesomeIcon icon={faPhoneSquareAlt} />
+          <FontAwesomeIcon icon={faSignOutAlt} />
         </div>
       </div>
     </>

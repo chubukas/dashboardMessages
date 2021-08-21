@@ -6,6 +6,7 @@ import {
   messageText,
   notificationBorder,
   headerText,
+  indicatordownMessage,
 } from "../css/inside.module.css";
 
 export const MessageDisplay = ({ data }) => {
@@ -32,8 +33,9 @@ export const MessageDisplay = ({ data }) => {
             <RightHeader smPhone={true} />
           </div>
           <div className="d-flex">
-            <div>
+            <div className="position-relative">
               <img className={avatar} src={pics} alt="avatar" />
+              <span className={indicatordownMessage}>&nbsp;</span>
             </div>
             <div className="mx-3">
               <p className={nameText}>{name}</p>
@@ -57,7 +59,7 @@ export const MessageDisplay = ({ data }) => {
       <div className={`my-3 text-muted ${headerText} ${notificationBorder}`}>
         <pre>{mainMessage}</pre>
       </div>
-      <div className="mx-3 mx-md-0">{replayMessages}</div>
+      {replayMessages}
     </>
   );
 };

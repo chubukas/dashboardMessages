@@ -22,6 +22,7 @@ import {
   socialFacebook,
   textArea,
   smallBtn,
+  clickable,
 } from "../css/inside.module.css";
 import { createNameAcronym } from "../../util/createNameAcronym";
 
@@ -42,7 +43,10 @@ export const InputMessage = () => {
   ];
 
   const displayIcons = Icons.map((data, i) => (
-    <div key={i} className="fa-xs text-primary col-2 col-lg-1 mt-3">
+    <div
+      key={i}
+      className={`fa-xs text-primary col-2 col-lg-1 mt-3 ${clickable}`}
+    >
       <FontAwesomeIcon icon={data} />
     </div>
   ));
@@ -58,12 +62,15 @@ export const InputMessage = () => {
                 {createNameAcronym("Steph Okafor")}
               </span>
               <span className={socialFacebook}>
-                Steph.Okafor@alphacx.com <span className="mx-2">X</span>
+                Steph.Okafor@alphacx.com{" "}
+                <span className={`mx-2 ${clickable}`}>X</span>
               </span>
             </div>
-            <div className={`text-primary my-auto mx-3 ${messageText}`}>
-              <span>cc</span>
-              <span className="mx-3"> bc</span>
+            <div
+              className={`text-primary my-auto mx-3 mt-2 mt-mb-0 ${messageText}`}
+            >
+              <span className={clickable}>cc</span>
+              <span className={`mx-3 ${clickable}`}> bc</span>
             </div>
           </div>
         </div>
