@@ -14,6 +14,8 @@ import {
   faBookOpen,
 } from "@fortawesome/free-solid-svg-icons";
 
+import { useState } from "react";
+
 import {
   inputBox,
   notificationBorder,
@@ -27,6 +29,10 @@ import {
 import { createNameAcronym } from "../../util/createNameAcronym";
 
 export const InputMessage = () => {
+  const [removeReciever, setRemoveReciever] = useState(true);
+
+  const onRemoveReciever = () => setRemoveReciever(!removeReciever);
+
   const Icons = [
     faSmile,
     faPrint,
@@ -56,14 +62,21 @@ export const InputMessage = () => {
       <div className={inputBox}>
         <div className={notificationBorder}>
           <div className="d-md-flex justify-content-between">
-            <div className={`${messageText} text-muted my-auto py-2`}>
+            <div className={`${messageText} text-muted my-auto py-2 d-flex`}>
               <span className="mx-3">To: </span>
-              <span className={avatarName}>
-                {createNameAcronym("Steph Okafor")}
-              </span>
-              <span className={socialFacebook}>
-                Steph.Okafor@alphacx.com{" "}
-                <span className={`mx-2 ${clickable}`}>X</span>
+              <span className={removeReciever ? "d-block" : "d-none"}>
+                <span className={avatarName}>
+                  {createNameAcronym("Steph Okafor")}
+                </span>
+                <span className={`${socialFacebook} `}>
+                  Steph.Okafor@alphacx.com{" "}
+                  <span
+                    className={`mx-2 ${clickable}`}
+                    onClick={onRemoveReciever}
+                  >
+                    X
+                  </span>
+                </span>
               </span>
             </div>
             <div
