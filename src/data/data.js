@@ -58,8 +58,10 @@ export const data = {
       {
         name: "Hammed Dauda",
         socialMedia: "Email",
+        date: "13 mar 2021",
         time: "16 days ago sat 13 mar 2021 at 12:54 pm",
-        replayMessage: `ghddfgdfgdhsdghabsjhdbhb chc bhscbshdfgyewgdyeduefsnhsd csdncfm
+        replayMessage: `
+        ghddfgdfgdhsdghabsjhdbhb chc bhscbshdfgyewgdyeduefsnhsd csdncfm
           shcbsdhcfsdbfhsdbfjhdfdhfbdhfbdhfdfgyfdgdyegdeywfehfhfdbfhdbfjhdfdf
           dysdgyfsgdfydgfhdfsbdfhdbfhdbjddbfhdjf`,
         pics: "",

@@ -8,6 +8,10 @@
   font-size: 0.9rem;
 }
 
+.rightBorder {
+  border-right: 1px #eeeeee solid;
+}
+
 .divText {
   border-radius: 20px;
   background-color: #eeeeee;
@@ -31,7 +35,6 @@
 
 /* INSIDE LEFT */
 .insideLeftMain {
-  border-right: 1px #eeeeee solid;
   padding-top: 1rem;
   padding-bottom: 0;
 }
@@ -97,4 +100,36 @@
 .insideRightMain {
   padding-top: 1rem;
   padding-bottom: 0;
+}
+
+.avatarName {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0d146e;
+  color: #ffffff;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.messageBottomMargin {
+  margin-bottom: 5rem;
+}
+
+/* INPUT MESSAGE */
+.inputBox {
+  height: 11rem;
+  width: 100%;
+  border: 1px #eeeeee solid;
+  border-radius: 5px;
+}
+
+.textArea {
+  border: none;
+  background-color: transparent;
+}
+.smallBtn {
+  height: 1.6rem;
+  padding: auto;
 }
