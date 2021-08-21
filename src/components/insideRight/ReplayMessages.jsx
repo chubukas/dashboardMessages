@@ -14,7 +14,7 @@ export const ReplayMessages = ({ replies }) => {
     <div>
       <div>
         <div className="d-flex">
-          <div>
+          <div className="mx-2 mx-md-0">
             {pics ? (
               <img className={avatar} src={pics} alt="avatar" />
             ) : (
@@ -32,7 +32,7 @@ export const ReplayMessages = ({ replies }) => {
         </div>
         <div className={`text-muted ${headerText}`}>
           <pre>{replayMessage}</pre>
-          <p>{date}</p>
+          <p className="mx-4 mx-md-0">{date}</p>
         </div>
       </div>
     </div>

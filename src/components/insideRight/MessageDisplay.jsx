@@ -1,4 +1,3 @@
-import { avatar } from "../css/header.module.css";
 import { RightHeader } from "./RightHeader";
 import { ReplayMessages } from "./ReplayMessages";
 import {
@@ -6,8 +5,9 @@ import {
   messageText,
   notificationBorder,
   headerText,
-  indicatordownMessage,
 } from "../css/inside.module.css";
+
+import { Avatar } from "../Avatar";
 
 export const MessageDisplay = ({ data }) => {
   const {
@@ -33,10 +33,7 @@ export const MessageDisplay = ({ data }) => {
             <RightHeader smPhone={true} />
           </div>
           <div className="d-flex">
-            <div className="position-relative">
-              <img className={avatar} src={pics} alt="avatar" />
-              <span className={indicatordownMessage}>&nbsp;</span>
-            </div>
+            <Avatar pics={pics} indicator={true} />
             <div className="mx-3">
               <p className={nameText}>{name}</p>
               <p className={`${messageText} text-muted`}>{`${

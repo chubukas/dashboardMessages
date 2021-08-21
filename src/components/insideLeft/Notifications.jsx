@@ -7,11 +7,11 @@ import {
   nameText,
   messageText,
   notificationBorder,
-  indicatordown,
   clickable,
 } from "../css/inside.module.css";
-import { avatar } from "../css/header.module.css";
 import { data } from "../../data/data";
+
+import { Avatar } from "../Avatar";
 
 export const Notifications = () => {
   const { notifications } = data;
@@ -54,10 +54,7 @@ export const Notifications = () => {
         } ${clickable}`}
       >
         <div className="d-flex justify-content-evenly">
-          <div className="my-auto position-relative">
-            <img className={avatar} src={pics} alt="avatar" />
-            <span className={indicatordown}>&nbsp;</span>
-          </div>
+          <Avatar pics={pics} indicator={true} />
           <div className=" mb-2">
             <div>
               <p className={nameText}>{name}</p>

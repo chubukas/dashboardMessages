@@ -2,8 +2,8 @@ import { faSearch, faBell } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../context/index";
 
-import { avatar } from "./css/header.module.css";
 import { indicatorTop, clickable } from "./css/inside.module.css";
+import { Avatar } from "./Avatar";
 
 export const Header = ({ children }) => {
   const [appState, dispatch] = useAppContext();
@@ -35,7 +35,7 @@ export const Header = ({ children }) => {
               <span className={indicatorTop}>&nbsp;</span>
             </span>
             <span className={`mx-4 ${clickable}`}>
-              <img className={avatar} src="/images/1.jpg" alt="avatar" />
+              <Avatar pics={"/images/1.jpg"} />
             </span>
           </div>
         </div>
