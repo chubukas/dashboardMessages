@@ -49,11 +49,11 @@ export const Notifications = () => {
         key={i}
         className={`${arr.length === i + 1 ? "" : notificationBorder}`}
       >
-        <div className="d-flex">
-          <div className="mx-3 my-auto">
+        <div className="d-flex justify-content-evenly">
+          <div className="my-auto">
             <img className={avatar} src={pics} alt="avatar" />
           </div>
-          <div className="mx-3 mb-2">
+          <div className=" mb-2">
             <div>
               <p className={nameText}>{name}</p>
 
@@ -71,7 +71,7 @@ export const Notifications = () => {
               </div>
             </div>
           </div>
-          <div className="mx-3">
+          <div className="">
             <div>
               <small className={`text-muted ${messageText}`}>{time}</small>
             </div>
