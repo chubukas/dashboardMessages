@@ -2,6 +2,7 @@ import { main } from "./css/inside.module.css";
 import { InsideLeft } from "./insideLeft";
 import { InsideRight } from "./insideRight";
 import { data } from "../data/data";
+import { rightBorder } from "./css/inside.module.css";
 
 export const Inside = () => {
   const { messages } = data;
@@ -9,7 +10,7 @@ export const Inside = () => {
     <div className={main}>
       <div>
         <div className="row">
-          <div className="col-md-3">
+          <div className={`col-md-3 ${rightBorder}`}>
             <InsideLeft />
           </div>
           <div className="col-md-8">
