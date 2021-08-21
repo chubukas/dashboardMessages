@@ -223,7 +223,7 @@
   position: absolute;
   width: 15rem;
   height: 8rem;
-  bottom: -43.8rem;
+  bottom: -45.5rem;
   left: 3.5rem;
   border-radius: 0.5rem;
   text-align: left;
@@ -255,7 +255,7 @@
   .suggestions {
     width: 15rem;
     height: 8rem;
-    bottom: -12rem;
+    bottom: -13rem;
     left: 29rem;
   }
 }
