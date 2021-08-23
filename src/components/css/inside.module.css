@@ -149,6 +149,26 @@
   font-size: 0.6rem;
 }
 
+.innerActive {
+  background-color: #0d146e;
+}
+
+.innerActive:hover {
+  background-color: #0d146e;
+}
+
+.outerActive {
+  background-color: #ffffff;
+  width: 99%;
+  margin-left: 0.3rem;
+}
+
+/* .outerActive:hover {
+  background-color: #ffffff;
+  width: 99%;
+  margin-left: 0.3rem;
+} */
+
 /* INSIDE Right */
 .insideRightMain {
   padding-top: 1rem;

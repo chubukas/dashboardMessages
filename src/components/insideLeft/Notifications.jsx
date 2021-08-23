@@ -1,20 +1,28 @@
+import { useState } from "react";
+
 import {
   statusSuccess,
   statusWarning,
   statusDanger,
   socialFacebook,
   socialEmail,
-  nameText,
-  messageText,
   notificationBorder,
   clickable,
+  innerActive,
 } from "../css/inside.module.css";
 import { data } from "../../data/data";
 
-import { Avatar } from "../Avatar";
+import { NotificationItem } from "./NotificationItem";
+
+const activeItems = {
+  itemMessage: false,
+  messageId: 0,
+};
 
 export const Notifications = () => {
   const { notifications } = data;
+
+  const [activeMessage, setActiveMessage] = useState(activeItems);
 
   const checkStatus = (status) => {
     let color;
@@ -51,41 +59,30 @@ export const Notifications = () => {
         key={i}
         className={`${
           arr.length === i + 1 ? "mb-4 mb-md-0" : notificationBorder
-        } ${clickable}`}
+        } ${clickable} ${
+          activeMessage.itemMessage &&
+          activeMessage.messageId === i &&
+          innerActive
+        }`}
+        onClick={() =>
+          setActiveMessage({
+            itemMessage: true,
+            messageId: i,
+          })
+        }
       >
-        <div className="d-flex justify-content-evenly">
-          <Avatar pics={pics} indicator={true} />
-          <div className=" mb-2">
-            <div>
-              <p className={nameText}>{name}</p>
-
-              <p className={`text-muted ${messageText}`}>{message}</p>
-            </div>
-
-            <div className="d-flex">
-              <div>
-                <small className={checkStatus(socialMedia)}>
-                  {socialMedia}
-                </small>
-              </div>
-              <div className="mx-2">
-                <small className={checkStatus(status)}>{status}</small>
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div>
-              <small className={`text-muted ${messageText}`}>{time}</small>
-            </div>
-            <div
-              className={`${
-                unreadMessage < 1 ? "d-none" : ""
-              } badge bg-primary rounded-circle`}
-            >
-              {unreadMessage}
-            </div>
-          </div>
-        </div>
+        <NotificationItem
+          name={name}
+          message={message}
+          time={time}
+          socialMedia={socialMedia}
+          status={status}
+          unreadMessage={unreadMessage}
+          pics={pics}
+          checkStatus={checkStatus}
+          activeMessage={activeMessage}
+          index={i}
+        />
       </div>
     )
   );
