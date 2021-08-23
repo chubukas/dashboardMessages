@@ -12,7 +12,7 @@ import {
 
 import { MessageName } from "../MessageName";
 import { SuggestionBox } from "../SuggestionsBox";
-import { InputMessageIcons } from "./InputMessageIcons";
+import { InputMessageDown } from "./InputMessageDown";
 
 export const InputMessage = () => {
   const [removeReciever, setRemoveReciever] = useState(true);
@@ -64,7 +64,7 @@ export const InputMessage = () => {
           ></textarea>
         </div>
 
-        <InputMessageIcons />
+        <InputMessageDown />
       </div>
 
       <SuggestionBox UsersSearch={UsersSearch} />

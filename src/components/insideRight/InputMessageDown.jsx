@@ -1,43 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSmile,
-  faPrint,
-  faFileAlt,
-  faBold,
-  faItalic,
-  faUnderline,
-  faAlignCenter,
-  faAlignLeft,
-  faAlignRight,
-  faHandHolding,
-  faFileImage,
-  faBookOpen,
-} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 import { smallBtn, clickable, dropdownContent } from "../css/inside.module.css";
+import { MessageInputIcons } from "../../data/icons";
 
-const Icons = [
-  faSmile,
-  faPrint,
-  faFileAlt,
-  faBold,
-  faItalic,
-  faUnderline,
-  faAlignCenter,
-  faAlignLeft,
-  faAlignRight,
-  faHandHolding,
-  faFileImage,
-  faBookOpen,
-];
-
-export const InputMessageIcons = () => {
+export const InputMessageDown = () => {
   const [openDropdown, setOpenDropdown] = useState(true);
 
   const onOpenDropdown = () => setOpenDropdown(!openDropdown);
 
-  const displayIcons = Icons.map((data, i) => (
+  const displayIcons = MessageInputIcons.map((data, i) => (
     <div
       key={i}
       className={`fa-xs text-primary col-2 col-lg-1 mt-3 ${clickable}`}

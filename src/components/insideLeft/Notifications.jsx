@@ -15,7 +15,7 @@ import { data } from "../../data/data";
 import { NotificationItem } from "./NotificationItem";
 
 const activeItems = {
-  itemMessage: false,
+  itemMessage: true,
   messageId: 0,
 };
 
@@ -66,7 +66,7 @@ export const Notifications = () => {
         }`}
         onClick={() =>
           setActiveMessage({
-            itemMessage: true,
+            ...activeMessage,
             messageId: i,
           })
         }

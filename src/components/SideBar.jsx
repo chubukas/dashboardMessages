@@ -3,23 +3,37 @@ import {
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 import {
   sidebar,
   topSidebar,
   sidebarIcons,
   downPhone,
+  active,
 } from "./css/sidebar.module.css";
-import { sidebarData } from "../data/sidebar";
+import { IconsSideBar } from "../data/icons";
 import { useAppContext } from "../context";
+
+const activeIcons = {
+  iconActive: true,
+  iconIndex: 0,
+};
 
 export const SideBar = () => {
   const [appState] = useAppContext();
+  const [isActive, setIsActive] = useState(activeIcons);
 
   const { sideBarOpen } = appState;
 
-  const sidebaricons = sidebarData.map(({ icon }, i) => (
-    <div key={i} className={sidebarIcons}>
+  const sidebaricons = IconsSideBar.map(({ icon }, i) => (
+    <div
+      key={i}
+      className={`${sidebarIcons} ${
+        isActive.iconActive && isActive.iconIndex === i && active
+      }`}
+      onClick={() => setIsActive({ ...activeIcons, iconIndex: i })}
+    >
       <FontAwesomeIcon icon={icon} />
     </div>
   ));

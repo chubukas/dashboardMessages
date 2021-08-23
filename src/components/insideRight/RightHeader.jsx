@@ -1,25 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowsAltH,
-  faUser,
-  faUserPlus,
-  faCheckCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
 
 import { chatClose, clickable } from "../css/inside.module.css";
+import { RightHeaderIcons } from "../../data/icons";
 
 export const RightHeader = ({ smPhone }) => {
-  const Icons = [faArrowsAltH, faUserPlus, faUser, faCheckCircle];
-
   const [closeChatState, setCloseChatState] = useState(true);
 
   const closeChatToggle = (data) => {
     data === faCheckCircle && setCloseChatState(!closeChatState);
   };
 
-  const displayIcons = Icons.map((data, i) => (
+  const displayIcons = RightHeaderIcons.map((data, i) => (
     <div
       className={`${smPhone ? "col-2 mt-3 text-center" : "mx-3"} ${
         data === faCheckCircle ? "text-success" : "text-muted"
